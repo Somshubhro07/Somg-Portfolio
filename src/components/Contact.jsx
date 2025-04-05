@@ -28,10 +28,11 @@ const Contact = () => {
     e.preventDefault();
     if (!form.name || !form.email || !form.message) { setError("Please fill out all fields."); return; }
     setError(null); setLoading(true); setFormSubmitted(false); // Reset submission state if retrying
-    const backendUrl = 'http://localhost:5001/api/contact'; // Adjust if needed
+    const apiUrl = `${import.meta.env.VITE_API_BASE_URL}/api/contact`;
+    console.log(`Sending request to: ${apiUrl}`); // Adjust if needed
 
     try {
-      const response = await fetch(backendUrl, {
+      const response = await fetch(apiUrl, {
         method: 'POST', headers: { 'Content-Type': 'application/json', },
         body: JSON.stringify(form),
       });
