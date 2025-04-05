@@ -6,23 +6,27 @@ import { textVariant, fadeIn } from '../hoc/SectionWrapper';
 import { FiGithub, FiExternalLink } from 'react-icons/fi'; // Ensure react-icons is installed
 
 // --- IMPORT YOUR PROJECT IMAGES FROM src/assets ---
-// (Make sure paths are correct relative to this file)
+// Ecom Checkout
 import ecomCheckout2 from '../assets/images/ecom-checkout-2.png';
 import ecomCheckout3 from '../assets/images/ecom-checkout-3.png';
 import ecomCheckout4 from '../assets/images/ecom-checkout-4.png';
+// Financial Dashboard
 import finDash1 from '../assets/images/financial-portfolio-dashboard-1.png';
 import finDash2 from '../assets/images/financial-portfolio-dashboard-2.png';
 import finDash3 from '../assets/images/financial-portfolio-dashboard-3.png';
 import finDash4 from '../assets/images/financial-portfolio-dashboard-4.png';
 import finDash5 from '../assets/images/financial-portfolio-dashboard-5.png';
 import finDash6 from '../assets/images/financial-portfolio-dashboard-6.png';
+// Shop Sync
 import shopSync1 from '../assets/images/shop-sync-1.png';
 import shopSync2 from '../assets/images/shop-sync-2.png';
 import shopSync3 from '../assets/images/shop-sync-3.png';
+// Tea Business
 import teaB1 from '../assets/images/tea-business-1.png';
 import teaB2 from '../assets/images/tea-business-2.png';
 import teaB3 from '../assets/images/tea-business-3.png';
 import teaB4 from '../assets/images/tea-business-4.png';
+// Uber Clone
 import uber1 from '../assets/images/uber-clone-1.png';
 import uber2 from '../assets/images/uber-clone-2.png';
 import uber3 from '../assets/images/uber-clone-3.png';
@@ -34,13 +38,14 @@ import uber8 from '../assets/images/uber-clone-8.png';
 import uber9 from '../assets/images/uber-clone-9.png';
 import uber10 from '../assets/images/uber-clone-10.png';
 
-// TODO: Import generated placeholder images for these two projects
-// import retailOptImage from '../assets/images/retail-optimizer-placeholder.png';
-// import flaskEcomImage from '../assets/images/flask-ecom-placeholder.png';
-// Using temporary text placeholders until you generate the images
-const retailOptImage = "placeholder_retail_opt";
-const flaskEcomImage = "placeholder_flask_ecom";
+// --- IMPORT NEW PLACEHOLDER IMAGES ---
+// Adjust paths if your images are in a subfolder like /projects/
+import inventory1 from '../assets/images/inventory-1.png';
+import inventory2 from '../assets/images/inventory-2.png';
+import ecom1 from '../assets/images/ecom-1.png';
+import ecom2 from '../assets/images/ecom-2.png';
 // ---------------------------------
+
 
 // Reusable Title Component with Theme Styles
 const SectionTitle = ({ title, subtitle }) => (
@@ -85,7 +90,7 @@ const ProjectCard = ({ index, name, description, tags, images = [], source_code_
         onHoverStart={() => setIsHovered(true)}
         onHoverEnd={() => setIsHovered(false)}
         variants={fadeIn("up", "spring", index * 0.2, 0.7)}
-        // Light/Dark Glassmorphic Card with Gradient Border Effect
+        // Light/Dark Glassmorphic Card with Gradient Border
         className="relative bg-gradient-to-br from-off-white/60 via-columbia-blue/10 to-off-white/60 dark:from-space-cadet/60 dark:via-ultra-violet/40 dark:to-space-cadet/60 backdrop-blur-lg p-5 rounded-2xl shadow-xl dark:shadow-space-cadet/30 w-full sm:w-[360px] overflow-hidden group border border-gray-300/30 dark:border-ultra-violet/30 before:absolute before:inset-0 before:p-px before:rounded-2xl before:pointer-events-none before:bg-gradient-to-b before:from-space-cadet/50 dark:before:from-columbia-blue/50 before:to-transparent before:opacity-0 before:transition-opacity before:duration-300 group-hover:before:opacity-100"
     >
         {/* Image Gallery Container */}
@@ -97,25 +102,22 @@ const ProjectCard = ({ index, name, description, tags, images = [], source_code_
                 animate="animate" // Use the animate prop which changes based on currentImageIndex
              >
                  {/* Map through images */}
-                 {images && images.length > 0 && images[0] !== "placeholder_retail_opt" && images[0] !== "placeholder_flask_ecom" ? (
+                 {images && images.length > 0 ? (
                     images.map((imgSrc, imgIndex) => (
                         <img
                             key={imgIndex}
                             src={imgSrc} // Use the imported variable
                             alt={`${name} screenshot ${imgIndex + 1}`}
-                            // --- USE object-contain TO SHOW FULL IMAGE ---
+                            // Use object-contain to show full image
                             className='h-full w-full min-w-full flex-shrink-0 object-contain object-center'
-                            // --- END CHANGE ---
                             loading="lazy"
                         />
                     ))
                  ) : (
-                     // Placeholder if no images are provided OR if it's the text placeholder
+                     // Placeholder if no images array is provided or is empty
                      <div className="h-full w-full flex items-center justify-center bg-gray-200 dark:bg-ultra-violet/30">
                          <span className="text-mid-gray dark:text-gray-400 text-sm italic px-4 text-center">
-                           {name === "Retail Inventory Optimizer" || name === "E-commerce Platform (Flask)"
-                             ? "Visual coming soon (Backend focus)"
-                             : "Image coming soon"}
+                           Visual Coming Soon
                           </span>
                      </div>
                  )}
@@ -184,59 +186,58 @@ const ProjectCard = ({ index, name, description, tags, images = [], source_code_
 // --- Main Projects Component Definition ---
 const Projects = () => {
     // --- Full Project Data using imported images ---
-     const projectsData = useMemo(() => [ // Use useMemo if data is static
+     const projectsData = useMemo(() => [
         {
           name: "Retail Inventory Optimizer", description: "Multi-agent AI system using Ollama & CrewAI...",
           tags: [ { name: "Python" }, { name: "Flask" }, { name: "AI/ML" },{ name: "SQLite"} ],
-          images: [retailOptImage], // Use placeholder variable
+          // --- Use new imported images ---
+          images: [inventory1, inventory2],
           source_code_link: "https://github.com/Somshubhro07/RetailAgentOpt", live_demo_link: null
         },
          {
           name: "ShopSync Inventory Mgmt", description: "Full-stack MERN solution for SMEs...",
           tags: [ { name: "React" }, { name: "Node.js" }, { name: "MongoDB" }, { name: "JWT" } ],
-          images: [shopSync1, shopSync2, shopSync3], // Use imported images
+          images: [shopSync1, shopSync2, shopSync3],
           source_code_link: "https://github.com/Somshubhro07/shop-sync", live_demo_link: null
         },
         {
           name: "Uber Clone (MERN)", description: "MERN stack ride-sharing prototype...",
           tags: [ { name: "React" }, { name: "Node.js" }, { name: "MongoDB" }, { name: "MERN" }, { name: "Real-Time"} ],
-          images: [uber1, uber2, uber3, uber4, uber5, uber6, uber7, uber8, uber9, uber10], // Use imported images
+          images: [uber1, uber2, uber3, uber4, uber5, uber6, uber7, uber8, uber9, uber10],
           source_code_link: "https://github.com/Somshubhro07/Uber-Clone", live_demo_link: null
         },
          {
           name: "Tea Business Platform", description: "MERN stack e-commerce base for tea business...",
           tags: [ { name: "React" }, { name: "Node.js" }, { name: "MongoDB" }, { name: "MERN" }, { name: "E-commerce"} ],
-          images: [teaB1, teaB2, teaB3, teaB4], // Use imported images
+          images: [teaB1, teaB2, teaB3, teaB4],
           source_code_link: "https://github.com/Somshubhro07/tea-business", live_demo_link: null
         },
          {
           name: "Financial Portfolio Dashboard", description: "React-based dashboard UI for viewing portfolios...",
           tags: [ { name: "React" }, { name: "TailwindCSS" }, { name: "Framer Motion" }, { name: "Recharts" } ],
-          images: [finDash1, finDash2, finDash3, finDash4, finDash5, finDash6], // Use imported images
+          images: [finDash1, finDash2, finDash3, finDash4, finDash5, finDash6],
           source_code_link: "https://github.com/Somshubhro07/Financial-Portfolio-Dashboard", live_demo_link: "https://financial-portfolio-dashboard.onrender.com/"
         },
         {
           name: "E-commerce Checkout UI", description: "Functional e-commerce frontend UI focusing on UX...",
           tags: [ { name: "React" }, { name: "TailwindCSS" }, { name: "Framer Motion" }],
-          images: [ecomCheckout2, ecomCheckout3, ecomCheckout4], // Use imported images
+          images: [ecomCheckout2, ecomCheckout3, ecomCheckout4],
           source_code_link: "https://github.com/Somshubhro07/Checkout-frontend", live_demo_link: "https://checkout-frontend-34rz.onrender.com/"
         },
         {
           name: "E-commerce Platform (Flask)", description: "Full-featured platform using Flask/SQLite...",
           tags: [ { name: "Python" }, { name: "Flask" }, { name: "SQLite"}, { name: "JavaScript" } ],
-          images: [flaskEcomImage], // Use placeholder variable
+          // --- Use new imported images ---
+          images: [ecom1, ecom2],
           source_code_link: "https://github.com/Somshubhro07/Ecom_project", live_demo_link: null
         },
-     ], []); // Empty dependency array for useMemo
+     ], []); // Empty dependency array means this data structure is created once
     // --- End Project Data ---
 
     // Function to assign themed color classes for tags
     const getTagColor = (tagName) => {
       const lowerTag = tagName.toLowerCase();
-      // Define light and dark classes separately
-      let lightClass = 'bg-gray-200 text-gray-700'; // Default light
-      let darkClass = 'dark:bg-ultra-violet/70 dark:text-gray-200'; // Default dark
-
+      let lightClass = 'bg-gray-200 text-gray-700'; let darkClass = 'dark:bg-ultra-violet/70 dark:text-gray-200';
       if (['react', 'framer motion', 'recharts'].includes(lowerTag)) { lightClass = 'bg-sky-100 text-sky-800'; darkClass = 'dark:bg-sky-900/70 dark:text-sky-200'; }
       else if (['python', 'flask', 'sqlite'].includes(lowerTag)) { lightClass = 'bg-blue-100 text-blue-800'; darkClass = 'dark:bg-blue-900/70 dark:text-blue-200'; }
       else if (['node.js', 'mongodb', 'mern'].includes(lowerTag)) { lightClass = 'bg-green-100 text-green-800'; darkClass = 'dark:bg-green-900/70 dark:text-green-200'; }
@@ -245,18 +246,16 @@ const Projects = () => {
       else if (['jwt'].includes(lowerTag)) { lightClass = 'bg-pink-100 text-pink-800'; darkClass = 'dark:bg-pink-900/70 dark:text-pink-200'; }
       else if (['javascript', 'real-time', 'real-time concepts'].includes(lowerTag)) { lightClass = 'bg-yellow-100 text-yellow-800'; darkClass = 'dark:bg-yellow-900/70 dark:text-yellow-100'; }
       else if (['e-commerce'].includes(lowerTag)) { lightClass = 'bg-red-100 text-red-800'; darkClass = 'dark:bg-red-900/70 dark:text-red-200'; }
-
-      return `${lightClass} ${darkClass}`; // Combine both classes
+      return `${lightClass} ${darkClass}`;
     };
 
-    // Apply colors to tags - useMemo for slight performance optimization
+    // Apply colors to tags using useMemo for optimization
     const projectsWithColors = useMemo(() => projectsData.map(proj => ({
         ...proj,
         tags: proj.tags.map(tag => ({ ...tag, colorClass: getTagColor(tag.name) })),
-        // Ensure images is always an array
-        images: proj.images || []
+        images: proj.images || [] // Ensure images is always an array
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    })), [projectsData]); // Recalculate if projectsData changes
+    })), [projectsData]); // Recalculate only if projectsData identity changes
 
 
   return (
