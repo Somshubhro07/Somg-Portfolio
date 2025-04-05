@@ -1,0 +1,38 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    /* Light mode: MORE NOTICEABLE gradient background */
+    /* Increased opacity of columbia-blue from /10 to /30 */
+    @apply bg-gradient-to-br from-brand-white via-columbia-blue/30 to-brand-white text-near-black;
+    /* Dark mode styles */
+    @apply dark:bg-brand-black dark:text-gray-300;
+    /* Common styles */
+    @apply font-sans transition-colors duration-300;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* ... rest of the styles (headings, scrollbar) ... */
+  h1, h2, h3, h4, h5, h6 { @apply font-heading font-bold; }
+  section { @apply overflow-hidden; }
+}
+
+
+/* Custom scrollbar styles */
+body::-webkit-scrollbar {
+  width: 8px;
+}
+body::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-near-black;
+}
+body::-webkit-scrollbar-thumb {
+  @apply bg-ultra-violet/50 dark:bg-ultra-violet/70 rounded-md;
+}
+body::-webkit-scrollbar-thumb:hover {
+  @apply bg-ultra-violet/70 dark:bg-space-cadet;
+}
