@@ -7,37 +7,37 @@ import { FiGithub, FiExternalLink } from 'react-icons/fi'; // Ensure react-icons
 
 // --- IMPORT YOUR PROJECT IMAGES FROM src/assets ---
 // (Make sure paths are correct relative to this file using the '@/' alias)
-import ecomCheckout1 from '@/assets/images/ecom-checkout-1.png'; // From previous update
-import ecomCheckout2 from '@/assets/images/ecom-checkout-2.png';
-import ecomCheckout3 from '@/assets/images/ecom-checkout-3.png';
-import ecomCheckout4 from '@/assets/images/ecom-checkout-4.png';
-import finDash1 from '@/assets/images/financial-portfolio-dashboard-1.png';
-import finDash2 from '@/assets/images/financial-portfolio-dashboard-2.png';
-import finDash3 from '@/assets/images/financial-portfolio-dashboard-3.png';
-import finDash4 from '@/assets/images/financial-portfolio-dashboard-4.png';
-import finDash5 from '@/assets/images/financial-portfolio-dashboard-5.png';
-import finDash6 from '@/assets/images/financial-portfolio-dashboard-6.png';
-import shopSync1 from '@/assets/images/shop-sync-1.png';
-import shopSync2 from '@/assets/images/shop-sync-2.png';
-import shopSync3 from '@/assets/images/shop-sync-3.png';
-import teaB1 from '@/assets/images/tea-business-1.png';
-import teaB2 from '@/assets/images/tea-business-2.png';
-import teaB3 from '@/assets/images/tea-business-3.png';
-import teaB4 from '@/assets/images/tea-business-4.png';
-import uber1 from '@/assets/images/uber-clone-1.png';
-import uber2 from '@/assets/images/uber-clone-2.png';
-import uber3 from '@/assets/images/uber-clone-3.png';
-import uber4 from '@/assets/images/uber-clone-4.png';
-import uber5 from '@/assets/images/uber-clone-5.png';
-import uber6 from '@/assets/images/uber-clone-6.png';
-import uber7 from '@/assets/images/uber-clone-7.png';
-import uber8 from '@/assets/images/uber-clone-8.png';
-import uber9 from '@/assets/images/uber-clone-9.png';
-import uber10 from '@/assets/images/uber-clone-10.png';
-import inventory1 from '@/assets/images/inventory-1.png'; // From previous update
-import inventory2 from '@/assets/images/inventory-2.png'; // From previous update
-import ecom1 from '@/assets/images/ecom-1.png';           // From previous update
-import ecom2 from '@/assets/images/ecom-2.png';           // From previous update
+import ecomCheckout1 from '../assets/images/ecom-checkout-1.png'; // Corrected import statement
+import ecomCheckout2 from '../assets/images/ecom-checkout-2.png';
+import ecomCheckout3 from '../assets/images/ecom-checkout-3.png';
+import ecomCheckout4 from '../assets/images/ecom-checkout-4.png';
+import finDash1 from '../assets/images/financial-portfolio-dashboard-1.png';
+import finDash2 from '../assets/images/financial-portfolio-dashboard-2.png';
+import finDash3 from '../assets/images/financial-portfolio-dashboard-3.png';
+import finDash4 from '../assets/images/financial-portfolio-dashboard-4.png';
+import finDash5 from '../assets/images/financial-portfolio-dashboard-5.png';
+import finDash6 from '../assets/images/financial-portfolio-dashboard-6.png';
+import shopSync1 from '../assets/images/shop-sync-1.png';
+import shopSync2 from '../assets/images/shop-sync-2.png';
+import shopSync3 from '../assets/images/shop-sync-3.png';
+import teaB1 from '../assets/images/tea-business-1.png';
+import teaB2 from '../assets/images/tea-business-2.png';
+import teaB3 from '../assets/images/tea-business-3.png';
+import teaB4 from '../assets/images/tea-business-4.png';
+import uber1 from '../assets/images/uber-clone-1.png';
+import uber2 from '../assets/images/uber-clone-2.png';
+import uber3 from '../assets/images/uber-clone-3.png';
+import uber4 from '../assets/images/uber-clone-4.png';
+import uber5 from '../assets/images/uber-clone-5.png';
+import uber6 from '../assets/images/uber-clone-6.png';
+import uber7 from '../assets/images/uber-clone-7.png';
+import uber8 from '../assets/images/uber-clone-8.png';
+import uber9 from '../assets/images/uber-clone-9.png';
+import uber10 from '../assets/images/uber-clone-10.png';
+import inventory1 from '../assets/images/inventory-1.png';
+import inventory2 from '../assets/images/inventory-2.png';
+import ecom1 from '../assets/images/ecom-1.png';
+import ecom2 from '../assets/images/ecom-2.png';        // From previous update
 // ---------------------------------
 
 
