@@ -6,44 +6,38 @@ import { textVariant, fadeIn } from '../hoc/SectionWrapper';
 import { FiGithub, FiExternalLink } from 'react-icons/fi'; // Ensure react-icons is installed
 
 // --- IMPORT YOUR PROJECT IMAGES FROM src/assets ---
-// Ecom Checkout
-import ecomCheckout2 from '../assets/images/ecom-checkout-2.png';
-import ecomCheckout3 from '../assets/images/ecom-checkout-3.png';
-import ecomCheckout4 from '../assets/images/ecom-checkout-4.png';
-// Financial Dashboard
-import finDash1 from '../assets/images/financial-portfolio-dashboard-1.png';
-import finDash2 from '../assets/images/financial-portfolio-dashboard-2.png';
-import finDash3 from '../assets/images/financial-portfolio-dashboard-3.png';
-import finDash4 from '../assets/images/financial-portfolio-dashboard-4.png';
-import finDash5 from '../assets/images/financial-portfolio-dashboard-5.png';
-import finDash6 from '../assets/images/financial-portfolio-dashboard-6.png';
-// Shop Sync
-import shopSync1 from '../assets/images/shop-sync-1.png';
-import shopSync2 from '../assets/images/shop-sync-2.png';
-import shopSync3 from '../assets/images/shop-sync-3.png';
-// Tea Business
-import teaB1 from '../assets/images/tea-business-1.png';
-import teaB2 from '../assets/images/tea-business-2.png';
-import teaB3 from '../assets/images/tea-business-3.png';
-import teaB4 from '../assets/images/tea-business-4.png';
-// Uber Clone
-import uber1 from '../assets/images/uber-clone-1.png';
-import uber2 from '../assets/images/uber-clone-2.png';
-import uber3 from '../assets/images/uber-clone-3.png';
-import uber4 from '../assets/images/uber-clone-4.png';
-import uber5 from '../assets/images/uber-clone-5.png';
-import uber6 from '../assets/images/uber-clone-6.png';
-import uber7 from '../assets/images/uber-clone-7.png';
-import uber8 from '../assets/images/uber-clone-8.png';
-import uber9 from '../assets/images/uber-clone-9.png';
-import uber10 from '../assets/images/uber-clone-10.png';
-
-// --- IMPORT NEW PLACEHOLDER IMAGES ---
-// Adjust paths if your images are in a subfolder like /projects/
-import inventory1 from '../assets/images/inventory-1.png';
-import inventory2 from '../assets/images/inventory-2.png';
-import ecom1 from '../assets/images/ecom-1.png';
-import ecom2 from '../assets/images/ecom-2.png';
+// (Make sure paths are correct relative to this file using the '@/' alias)
+import ecomCheckout1 from '@/assets/images/ecom-checkout-1.png'; // From previous update
+import ecomCheckout2 from '@/assets/images/ecom-checkout-2.png';
+import ecomCheckout3 from '@/assets/images/ecom-checkout-3.png';
+import ecomCheckout4 from '@/assets/images/ecom-checkout-4.png';
+import finDash1 from '@/assets/images/financial-portfolio-dashboard-1.png';
+import finDash2 from '@/assets/images/financial-portfolio-dashboard-2.png';
+import finDash3 from '@/assets/images/financial-portfolio-dashboard-3.png';
+import finDash4 from '@/assets/images/financial-portfolio-dashboard-4.png';
+import finDash5 from '@/assets/images/financial-portfolio-dashboard-5.png';
+import finDash6 from '@/assets/images/financial-portfolio-dashboard-6.png';
+import shopSync1 from '@/assets/images/shop-sync-1.png';
+import shopSync2 from '@/assets/images/shop-sync-2.png';
+import shopSync3 from '@/assets/images/shop-sync-3.png';
+import teaB1 from '@/assets/images/tea-business-1.png';
+import teaB2 from '@/assets/images/tea-business-2.png';
+import teaB3 from '@/assets/images/tea-business-3.png';
+import teaB4 from '@/assets/images/tea-business-4.png';
+import uber1 from '@/assets/images/uber-clone-1.png';
+import uber2 from '@/assets/images/uber-clone-2.png';
+import uber3 from '@/assets/images/uber-clone-3.png';
+import uber4 from '@/assets/images/uber-clone-4.png';
+import uber5 from '@/assets/images/uber-clone-5.png';
+import uber6 from '@/assets/images/uber-clone-6.png';
+import uber7 from '@/assets/images/uber-clone-7.png';
+import uber8 from '@/assets/images/uber-clone-8.png';
+import uber9 from '@/assets/images/uber-clone-9.png';
+import uber10 from '@/assets/images/uber-clone-10.png';
+import inventory1 from '@/assets/images/inventory-1.png'; // From previous update
+import inventory2 from '@/assets/images/inventory-2.png'; // From previous update
+import ecom1 from '@/assets/images/ecom-1.png';           // From previous update
+import ecom2 from '@/assets/images/ecom-2.png';           // From previous update
 // ---------------------------------
 
 
@@ -94,7 +88,7 @@ const ProjectCard = ({ index, name, description, tags, images = [], source_code_
         className="relative bg-gradient-to-br from-off-white/60 via-columbia-blue/10 to-off-white/60 dark:from-space-cadet/60 dark:via-ultra-violet/40 dark:to-space-cadet/60 backdrop-blur-lg p-5 rounded-2xl shadow-xl dark:shadow-space-cadet/30 w-full sm:w-[360px] overflow-hidden group border border-gray-300/30 dark:border-ultra-violet/30 before:absolute before:inset-0 before:p-px before:rounded-2xl before:pointer-events-none before:bg-gradient-to-b before:from-space-cadet/50 dark:before:from-columbia-blue/50 before:to-transparent before:opacity-0 before:transition-opacity before:duration-300 group-hover:before:opacity-100"
     >
         {/* Image Gallery Container */}
-        <div className='relative w-full h-[230px] mb-4 rounded-xl overflow-hidden bg-near-black/10 dark:bg-brand-black/30'>
+        <div className='relative w-full h-[230px] mb-4 rounded-xl overflow-hidden bg-near-black/5 dark:bg-brand-black/20'> {/* Slightly lighter background */}
              {/* Inner container that slides */}
              <motion.div
                 className='flex h-full w-full'
@@ -108,13 +102,14 @@ const ProjectCard = ({ index, name, description, tags, images = [], source_code_
                             key={imgIndex}
                             src={imgSrc} // Use the imported variable
                             alt={`${name} screenshot ${imgIndex + 1}`}
-                            // Use object-contain to show full image
+                            // --- USE object-contain TO SHOW FULL IMAGE ---
                             className='h-full w-full min-w-full flex-shrink-0 object-contain object-center'
+                            // --- END CHANGE ---
                             loading="lazy"
                         />
                     ))
                  ) : (
-                     // Placeholder if no images array is provided or is empty
+                     // Placeholder if no images array is provided
                      <div className="h-full w-full flex items-center justify-center bg-gray-200 dark:bg-ultra-violet/30">
                          <span className="text-mid-gray dark:text-gray-400 text-sm italic px-4 text-center">
                            Visual Coming Soon
@@ -190,8 +185,7 @@ const Projects = () => {
         {
           name: "Retail Inventory Optimizer", description: "Multi-agent AI system using Ollama & CrewAI...",
           tags: [ { name: "Python" }, { name: "Flask" }, { name: "AI/ML" },{ name: "SQLite"} ],
-          // --- Use new imported images ---
-          images: [inventory1, inventory2],
+          images: [inventory1, inventory2], // Use imported images
           source_code_link: "https://github.com/Somshubhro07/RetailAgentOpt", live_demo_link: null
         },
          {
@@ -221,14 +215,13 @@ const Projects = () => {
         {
           name: "E-commerce Checkout UI", description: "Functional e-commerce frontend UI focusing on UX...",
           tags: [ { name: "React" }, { name: "TailwindCSS" }, { name: "Framer Motion" }],
-          images: [ecomCheckout2, ecomCheckout3, ecomCheckout4],
+          images: [ecomCheckout1,ecomCheckout2, ecomCheckout3, ecomCheckout4],
           source_code_link: "https://github.com/Somshubhro07/Checkout-frontend", live_demo_link: "https://checkout-frontend-34rz.onrender.com/"
         },
         {
           name: "E-commerce Platform (Flask)", description: "Full-featured platform using Flask/SQLite...",
           tags: [ { name: "Python" }, { name: "Flask" }, { name: "SQLite"}, { name: "JavaScript" } ],
-          // --- Use new imported images ---
-          images: [ecom1, ecom2],
+          images: [ecom1, ecom2], // Use imported images
           source_code_link: "https://github.com/Somshubhro07/Ecom_project", live_demo_link: null
         },
      ], []); // Empty dependency array means this data structure is created once

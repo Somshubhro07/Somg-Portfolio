@@ -6,7 +6,7 @@ Welcome! This is the repository for my personal portfolio website, meticulously 
 
 ---
 
-**✨ Live Demo:** [**portfolio.somshubhro.com**](https://portfolio.somshubhro.com) 
+**✨ Live Demo:** [**portfolio.somshubhro.com**](https://somg-portfolio.onrender.com) 
 
 ---
 
