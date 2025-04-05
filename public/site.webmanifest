@@ -1,3 +1,4 @@
+
 {
     "name": "Somshubhro Guha Portfolio",
     "short_name": "SG Portfolio",
@@ -5,10 +6,9 @@
     "display": "standalone",
     "background_color": "#000505",
     "theme_color": "#3B3355",
-    "description": "Somshubhro Guha's Web Developer Portfolio.",
     "icons": [
       {
-        "src": "/images/android-chrome-192x192.png",
+        "src": "/images/android-chrome-192x192.png", 
         "sizes": "192x192",
         "type": "image/png"
       },
