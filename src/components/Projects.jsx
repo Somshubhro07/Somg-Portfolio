@@ -7,6 +7,7 @@ import { FiGithub, FiExternalLink } from 'react-icons/fi'; // Ensure react-icons
 
 // --- IMPORT YOUR PROJECT IMAGES FROM src/assets ---
 // (Make sure paths are correct relative to this file using the '@/' alias)
+import ecomCheckout1 from '../assets/images/ecom-checkout-1.png'; // Corrected import statement
 import ecomCheckout2 from '../assets/images/ecom-checkout-2.png';
 import ecomCheckout3 from '../assets/images/ecom-checkout-3.png';
 import ecomCheckout4 from '../assets/images/ecom-checkout-4.png';
@@ -214,7 +215,7 @@ const Projects = () => {
         {
           name: "E-commerce Checkout UI", description: "Functional e-commerce frontend UI focusing on UX...",
           tags: [ { name: "React" }, { name: "TailwindCSS" }, { name: "Framer Motion" }],
-          images: [ecomCheckout2, ecomCheckout3, ecomCheckout4],
+          images: [ecomCheckout1,ecomCheckout2, ecomCheckout3, ecomCheckout4],
           source_code_link: "https://github.com/Somshubhro07/Checkout-frontend", live_demo_link: "https://checkout-frontend-34rz.onrender.com/"
         },
         {
